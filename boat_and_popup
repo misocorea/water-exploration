@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BoatPop : MonoBehaviour
+{
+
+    public GameObject canvasObject;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        canvasObject.SetActive(false);
+    }
+
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "boat")
+        {
+            canvasObject.SetActive(true);
+        }
+    }
+
+}
