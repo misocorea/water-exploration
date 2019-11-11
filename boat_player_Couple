@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Couple : MonoBehaviour { 
+
+    public GameObject theboat;
+
+public void CoupleTogether()
+    {
+        transform.eulerAngles = new Vector3( -1.265f , 274.185f , 0f);
+        transform.position = new Vector3(381.02f, 36.41f, 832.74f);
+
+        theboat.transform.parent = GameObject.Find("Camera (PPV1)").transform;
+    }
+
+    public void Uncouple()
+    {
+    theboat.transform.parent = null;
+    }
+
+}
